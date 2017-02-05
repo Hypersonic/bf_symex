@@ -60,7 +60,7 @@ class State(object):
             st.dp = new_dp
             return [st]
         elif op.kind == 'ChangeDp':
-            new_memory = copy(self.memory)
+            new_memory = self.memory
             new_memory[self.dp] += op.data
             st = self.clone()
             st.ip = self.ip + 1
